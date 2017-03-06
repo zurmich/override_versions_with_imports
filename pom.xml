@@ -22,26 +22,26 @@
                 <artifactId>
                     spring-boot-dependencies
                 </artifactId>
-                <version>1.5.1.RELEASE</version>
+                <version>2.0.0.BUILD-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.thymeleaf</groupId>
-                <artifactId>thymeleaf</artifactId>
-                <version>3.0.2.RELEASE</version>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>8.5.9</version>
             </dependency>
             <dependency>
-                <groupId>org.thymeleaf</groupId>
-                <artifactId>thymeleaf-spring4</artifactId>
-                <version>3.0.2.RELEASE</version>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-el</artifactId>
+                <version>8.5.9</version>
             </dependency>
             <dependency>
-                <groupId>nz.net.ultraq.thymeleaf</groupId>
+                <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>
-                    thymeleaf-layout-dialect
+                    tomcat-embed-websocket
                 </artifactId>
-                <version>2.0.4</version>
+                <version>8.5.9</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -72,4 +72,42 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <!-- DELETE ME -->
+        <repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+    <!-- DELETE ME -->
 </project>
